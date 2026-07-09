@@ -24,7 +24,7 @@ const en = {
     ctaProjects: "Selected work",
     ctaContact: "Get in touch",
     photoAlt: "Jek standing on warm asphalt, arms crossed, photographed from above",
-    photoCaption: "Medan, North Sumatra — 3.59°N / 98.67°E",
+    photoCaption: "Medan, North Sumatra",
     strip: {
       nowLabel: "Now",
       now: "Team Lead (part-time), RevoU",
@@ -239,7 +239,7 @@ const id: Dict = {
     ctaProjects: "Karya pilihan",
     ctaContact: "Hubungi saya",
     photoAlt: "Jek berdiri di atas aspal hangat, tangan bersilang, difoto dari atas",
-    photoCaption: "Medan, Sumatera Utara — 3.59°LU / 98.67°BT",
+    photoCaption: "Medan, Sumatera Utara",
     strip: {
       nowLabel: "Sekarang",
       now: "Team Lead (paruh waktu), RevoU",
