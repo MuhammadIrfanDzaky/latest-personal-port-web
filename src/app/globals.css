@@ -20,7 +20,7 @@
   --bg: #efe8db;
   --surface: #e7dfcd;
   --ink: #221c15;
-  --soft: #6f6557;
+  --soft: #5b5143;
   --line: #d8cdb8;
   --rust: #a4491f;
 }
@@ -28,8 +28,8 @@
 .dark {
   --bg: #161210;
   --surface: #1e1914;
-  --ink: #eae0cf;
-  --soft: #9a8d7c;
+  --ink: #eee5d6;
+  --soft: #a89b8a;
   --line: #302820;
   --rust: #d0754a;
 }
@@ -46,6 +46,10 @@ html {
 
 body {
   @apply bg-bg font-sans text-ink antialiased;
+  /* larger, slightly heavier base type for readability */
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-weight: 450;
 }
 
 /* Paper grain — keeps surfaces tactile instead of flat */
@@ -86,6 +90,34 @@ body::after {
   .wipe-link {
     transition: none;
   }
+}
+
+/* SPA section panels — replay a soft entrance every time a panel is shown */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.section-panel:not([hidden]) {
+  animation: panel-in 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-panel:not([hidden]) {
+    animation: none;
+  }
+}
+
+/* View Transitions (theme, language, section switches) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 320ms;
 }
 
 /* Scroll reveal — only hides content when JS can actually run */

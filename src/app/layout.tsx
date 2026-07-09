@@ -3,6 +3,7 @@ import { clash, satoshi, sentient, plexMono } from "@/lib/fonts";
 import { Providers } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { BottomNav } from "@/components/bottom-nav";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -68,9 +69,12 @@ export default function RootLayout({
           >
             Skip to content
           </a>
-          <SiteHeader />
-          <main id="main">{children}</main>
-          <SiteFooter />
+          <div className="pb-16 lg:pb-0">
+            <SiteHeader />
+            <main id="main">{children}</main>
+            <SiteFooter />
+          </div>
+          <BottomNav />
         </Providers>
       </body>
     </html>
