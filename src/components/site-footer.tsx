@@ -10,7 +10,6 @@ export function SiteFooter() {
           <span className="inline-block size-1.5 rounded-full bg-rust" aria-hidden />
           Medan, ID — <LocalTime />
         </p>
-        <p>Built with Next.js. No template.</p>
       </div>
     </footer>
   );
